@@ -21,7 +21,7 @@ if (Array.isArray(numbers)) {
     let index = 0;
 
     for (let i = 0; i < numbers.length; i++) {
-        let number = numbers[i];
+        const number = numbers[i];
 
         if (number > 0) {
             sumTotalPositive += number;
@@ -33,7 +33,7 @@ if (Array.isArray(numbers)) {
             } else if (number % 2 === 0) {
                 sumPairTotalPositive += number;
                 pairValuePositiveCount++;
-            } else if (!(number % 2 === 0)) {
+            } else if (number % 2 !== 0) {
                 sumNotPairTotalPositive += number;
                 pairNotValuePositiveCount++;
             }
